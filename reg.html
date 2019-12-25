@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		.box{
+			width: 500px;
+			height: 700px;
+			padding: 0 20px;
+			border: 2px solid #1688ea;
+			margin: 100px auto;
+			position: relative;
+		}
+		.im{
+			width: 50px;
+			height: 50px;
+			position: absolute;
+			top: 50px;
+			left: 150px;
+		}
+		.tit{
+			margin-top: 80px;
+			margin-bottom: 50px;
+			text-align: center;
+		}
+		.a{
+			text-decoration: none;
+			color: black;
+			position: absolute;
+			top: 100px;
+			right: 50px;
+			font-size: 30px;
+		}
+		.brand{
+			color: #1688ea;
+			font-size: 18px;
+			margin-right: 20px;
+		}
+		.inp{
+			width: 450px;
+			height: 50px;
+			text-indent: 8px;
+			margin-top: 30px;
+		}
+		.notice{
+			height: 30px;
+			line-height: 30px;
+			font-size: 12px;
+		}
+
+		.code{
+			width: 60%;
+		}
+		.getCode{
+			width: 180px;
+			height: 50px;
+			float: right;
+			border: none;
+			background-color: #eee;
+			position: absolute;
+			top: 410px;
+		}
+		.codeImg{
+			height: 40px;
+		}
+		.btn{
+			background: #1688ea;
+			width: 200px;
+			height: 40px;
+			border: none;
+			margin-top: 30px ;
+			margin-left: 150px;
+			color: #fff;
+			border-radius: 3px;
+		}
+		img{
+			width: 150px;
+			height: 40px;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="b">
+		<div class="box">
+			
+			<img src="images/logo.jpg" class="im">
+			<p class="tit">
+				<span>用户注册</span>
+			</p>
+			
+			<input class="inp" type="text" placeholder="用户名" id="nam" onfocus="on()">
+			<p class="notice" id="p1"></p>
+
+			<input class="inp" type="password" placeholder="密码" id="pass" onfocus="on1()">
+			<p class="notice" id="p2"></p>
+		
+			<input class="inp" type="password" placeholder="确认密码" id="pass1" onfocus="on2()">
+			<p class="notice" id="p3"></p>
+			
+			<button class="btn" id="btn1">注册</button>
+		</div>
+	</div>
+	<script>
+		var p1=document.getElementById("p1");
+		var p2=document.getElementById("p2");
+		var pp=document.getElementById("p3");
+		var btn1=document.getElementById("btn1");
+		var div1=document.getElementById("div1");
+		var nam=document.getElementById("nam");
+		var pass=document.getElementById("pass");
+		var test=document.getElementById("test");
+		var textN=" ";
+		function on(){
+			p1.innerHTML="请输入4-10位用户名";
+		}
+		nam.onblur=function(){
+			p1.innerHTML=" ";
+		}
+		function on1(){
+			p2.innerHTML="请输入6-12位密码";
+		}
+		pass.onblur=function(){
+			p2.innerHTML=" ";
+		}
+
+		function on2(){
+			p3.innerHTML="请再次输入密码";
+		}
+		pass1.onblur=function(){
+			p3.innerHTML=" ";
+		}
+
+		btn1.onclick=function(){
+			var x=nam.value;
+			var y=pass.value;
+			var n=pass1.value;
+			var x1=x.length;
+			var y1=y.length;
+			if(x1<4||x1>10){
+				p1.innerHTML="用户名位数不对";
+			}
+			if(y1<6||y1>12){
+				p2.innerHTML="密码位数不对";
+			}
+			if(n!=y){
+				p3.innerHTML="密码有误";
+			}
+		    if(x1>=4&&x1<=10 && y1>=6&&y1<=12 && n==y){
+				alert("注册成功");
+
+			}
+		}
+	</script>
+</body>
+</html>
