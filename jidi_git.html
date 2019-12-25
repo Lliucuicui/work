@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style type="text/css">
+    *{
+    padding: 0;
+    margin: 0;
+}
+ul,li,ol{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+#header{
+    width:100% ;
+    height:100px;
+    background:rgb(244, 244, 244);
+    position: fixed; 
+    top: 0px; 
+    left: 0px; 
+    width: 100%; 
+    z-index: 9999;
+    border-bottom:1px solid #cccccc;
+}
+#logobox{
+    display: inline;
+    position: relative;
+    left: 120px;
+    top: 15px;
+}
+#logo{
+    width: 100px;
+    height:64px;
+    float: left;    
+}
+#aice{
+    color: #ccc;
+    width: 960px;
+    height: 45px;
+    margin: 0 auto;
+    line-height: 45px;
+
+}
+#aice li{
+    height:45px;
+    text-align: center;
+    display: inline-block;
+    padding-left: 20px;/*内边距*/
+    padding-right: 10px;
+    line-height: 45px;
+}
+#t{   
+    float: right;
+}
+.choose{
+    width: 960px;
+    height: 45px;
+    margin: 0 auto;
+    line-height: 45px;
+}
+.choose li{
+	display: inline-block;
+	font-size: 24px;
+	text-align: center;
+	line-height:45px;
+    height: 45px;
+    margin-left: 90px;
+    margin-right: 90px;
+    
+}
+.choose a:hover{
+	color: darksalmon;
+}
+.choose li:hover{
+	border-bottom: 5px solid darksalmon;
+}
+#sign{
+    height: 80px;
+    width: 100px;
+    text-align: center;
+    position: absolute;
+    right: 100px;
+    top: 10px;
+}
+#sign li{
+    display: inline-block;
+    color: darkgrey;
+}
+#hs{
+    border:1px solid #cccccc;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    overflow: hidden;
+}
+#hs img{
+	height: 50px;
+    width: 50px;
+}
+.head{
+	height: 100px;
+	margin-top: 100px;
+	border-bottom: 1px solid rgba(182, 183, 183,0.5);
+}
+.headd{
+	width: 1200px;
+	height: 90px;
+	margin: 0 auto;
+}
+.d{
+	height: 90px;
+	float: left;
+	text-align: center;
+	line-height: 90px;
+	position: relative;
+    width: 1300px;
+    left: 200px;
+}
+.dd{
+	width: 500px;
+	height: 34px;
+	position: absolute;
+}
+.i1{
+	width: 400px;
+	height: 35px;
+	border:2px solid rgb(182, 183, 183); 
+	color: rgb(182, 183, 183);
+	float: left;
+	margin-top: 35px;
+	margin-left: 150px;
+}
+.i2{
+	width: 90px;
+	height: 39px;
+	background: linear-gradient(#ced4da 5%,#878a8d 95%);
+	text-align: center;
+	float: left;
+	margin-top: 35px;
+	border:2px solid rgb(182, 183, 183);
+	color: rgb(173, 216, 230);
+    font-size: 20px;
+    font-weight: bolder;
+}
+.animal{
+	height: 130px;
+    left: 120px;
+	margin:0 auto;
+	text-align: center;
+	margin-top: 10px;
+    
+}
+
+#box{
+    width:1000px;
+    height:400px;
+    position:relative; 
+    margin:32px auto;
+    border: 1px solid black;
+	margin-bottom: 0px;
+	overflow: hidden;
+}
+#img1{
+    position:absolute;
+    left:0;
+    top:0;
+}
+#slider{
+    width:150px;
+    height:150px;
+    position:absolute;
+    left:0;
+    top:0;
+    background:#CCC;
+    opacity:0.4;
+    cursor: move;
+    display:none; 
+    filter:alpha(opacity=40);
+}
+#img2{
+    position:absolute;
+	right:0;
+	top:0;
+    display:none;
+    width:500px;
+    height:400px;
+    overflow:hidden;
+}
+#Bimg{
+    position:absolute;
+    left:0;
+    top:0;
+}
+.animal ul{
+	position: relative;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+}
+.animal li{
+	display: inline-block;
+	text-align: center;
+}
+.animal img{
+	display: block;
+	width: 160px;
+	height: 120px;
+	text-align: center;
+	line-height: 40px;
+}
+.line{
+	width: 950px;
+	height: 600px;
+	border: solid 2px rgb(182, 183, 183);
+	margin:0 auto;
+	background-color: rgb(244, 244, 244);
+}
+.line_img{
+	width: 150px;
+	height: 70px;
+	font-weight: bolder;
+	font-size: 30px;
+	margin-left: 20px;
+}
+.lined{
+	width: 750px;
+	height: 800px;
+	margin-top: 40px;
+	margin: 10px 100px 40px 100px;
+}
+.line2{
+	width: 950px;
+	height: 1300px;
+	border: solid 2px rgb(182, 183, 183);
+	margin:0 auto;
+	background-color: rgb(244, 244, 244);
+}
+.finally{
+	height: 75px;
+	background-color: #323232;
+	color:white;
+	font-size: 14px;
+	text-align: center;
+	padding-top: 35px;
+}
+.finally a{
+	color:white;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 30px;
+}
+.z2{
+	padding-top: 25px;
+}
+
+    
+    </style>
+</head>
+<body>
+    <div class="boxBig">
+        <div id="headbox">
+            <div id="header">
+                <div id="logobox"><img src="imgs/jj2.jpg" id="logo"></div>
+                <ul id="aice">
+                    <li id="t"><a href="#">联系我们</a></li>
+                    <li id="t">|</li>
+                    <li id="t"><a href="#">首页</a></li>
+                </ul>
+                <ul class="choose">
+                    <li class="c"><a href="web.html">首页</a></li>
+                    <li class="c"><a href="big.html">海洋</a></li>
+                    <li class="c"><a href="sky.html">天空</a></li>
+                    <li class="c"><a href="#">极地</a></li>
+                </ul>
+                <ul id="sign">
+                    <li id="hs">
+                        <img src="imgs/jj1.jpg">
+                    </li>
+                    <li>
+                        <a href="lo.html">登录</a>
+                        /
+                        <a href="reg.html">注册</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- 搜索框 -->
+        <div class="head">
+            <div class="headd">
+                <div class="d">
+                    <input class = "i1" type="text" name="keyword" placeholder="&nbsp;&nbsp;请输入关键词！">
+                    <span>
+                        <button id="i2" class = "i2" type="submit">搜索</button>
+                    </span>
+                </div>
+            </div>	
+        </div>
+        <!--放大镜 -->
+        <div id="box">
+            <div id="img1">
+                <img src="imgs/1.jpg" width="500" height="400" id="Simg"/>
+                <div id="slider"></div>
+            </div>
+            <div id="img2">
+                <img src="imgs/1.jpg"  id="Bimg" width="1000" height="800"/>
+            </div>
+        </div>
+        <div class="animal">
+            <ul id="animalLi">
+                <li><img src="imgs/1.jpg"></li>
+                <li><img src="imgs/3.jpg"></li>
+                <li><img src="imgs/8.jpg"></li>
+                <li><img src="imgs/9.jpg"></li>
+                <li><img src="imgs/10.jpg"></li>
+                <li><img src="imgs/11.jpg"></li>
+                <li><img src="imgs/12.jpg"></li>
+            </ul>
+        </div>
+        <div class="line">
+            <div class="line_img">
+                预订须知
+            </div>
+            <div class="lined">
+                <h4>优待政策</h4>
+                <p>
+                        &nbsp;&nbsp;&nbsp;正佳极地海洋世界日场</br>
+                        &nbsp;&nbsp;&nbsp;儿童：1.0米（不含）以下儿童（1位成人限带1名免票儿童入园）【免费】；</br>
+                        &nbsp;&nbsp;&nbsp;1.0米（含）-1.5米（不含）儿童，需购票成人陪同入园。【优惠票】。</br>
+                        &nbsp;&nbsp;&nbsp;学生：全日制大中小学生（不含成人教育、研究生）【优惠票】。</br>
+                        &nbsp;&nbsp;&nbsp;老人：65周岁（含）以上老人凭老年证或身份证【优惠票】。</br>
+                        &nbsp;&nbsp;&nbsp;残疾人：凭残疾证【优惠票】。</br>
+                        &nbsp;&nbsp;&nbsp;以上信息仅供参考，具体请以景区当天披露为准。</br>
+                        &nbsp;&nbsp;&nbsp;正佳极地海洋世界夜场</br>
+                        &nbsp;&nbsp;&nbsp;儿童：1.0米（不含）以下儿童（1位成人限带1名免票儿童入园）【免费】；</br>
+                        &nbsp;&nbsp;&nbsp;1.0米（含）-1.5米（不含）儿童，需购票成人陪同入园。【优惠票】</br>
+                        &nbsp;&nbsp;&nbsp;学生：全日制大中小学生（不含成人教育、研究生）【优惠票】。</br>
+                        &nbsp;&nbsp;&nbsp;老人：65周岁（含）以上老人凭老年证或身份证【优惠票】。</br>
+                        &nbsp;&nbsp;&nbsp;残疾人：凭残疾证【优惠票】。</br>
+                        &nbsp;&nbsp;&nbsp;以上信息仅供参考，具体请以景区当天披露为准。</br>
+                </p>
+                <h4>温馨提示</h4>
+                <p>
+                    &nbsp;&nbsp;&nbsp;潜水现已暂停开放。景区近期对9号展区进行升级改造，部分展示及互动表演优化调整，给您的参观带来不便，敬请周知与谅解，具体开放时间请以景区实际公布为准。
+                    景区活动内容如有变动，以当日公告为准。景区所有项目均会定期进行日检、周检、月检和年度检修，相关检修工作可能会造成部分项目运行时间的延迟或暂停对游客开放，详情以景区现场公告为准。
+                    入园禁止携带：烟花、爆竹等易燃易爆品，有害、有毒物 管制刀具、枪支及法律规定的危险物品。
+                    园内禁止活动：未经许可在景区内售卖任何物品或服务、展览。
+                </p>
+            </div>
+        </div>
+        <div class="line2">
+            <div class="line_img">
+                六大展区
+            </div>
+            <div class="lined">
+                <h4>一、生命之源</h4>
+                <p>
+                        &nbsp;&nbsp;&nbsp;270度全景天幕上演变幻莫测的浩瀚宇宙，身临其境感受宇宙大爆炸的震撼。蓝色
+                    LED星球诉说地球家园几十亿年演化的迷人故事。穿过炫镜长廊目睹曾经美丽动人的生物，
+                    踏入生机勃勃的水草海藻世界和唯美动人的沧海桑田水幕年华，海洋之旅就此开始。
+                </p>
+                <h4>二、雨林湖泊</h4>
+                <p>
+                        &nbsp;&nbsp;&nbsp;欢迎来到孕育奇珍动植物的宝藏天地—雨林湖泊。这是“大地之肺”与地球的循环系
+                    统，在这里将会遇上来自世界各地的热带雨林和世界六大河的各种奇珍异兽！有
+                    憨态可掬萌态十足的网红水豚，”好吃懒做"的浣熊君以及号称淡水鱼中巨无霸的
+                    巨骨舌鱼。它们会展示各种生存绝技，让您一边发现动物们的有趣习性，一边领
+                    略保护雨林与湖泊的重要性。
+                </p>
+                <img src="imgs/111.jpg">
+                <img src="imgs/222.jpg">
+                <h4>三、水母秘境</h4>
+                <p>
+                        &nbsp;&nbsp;&nbsp;走进水母秘境，晶莹剔透的水母将轻拂过您的视野，在您脚步间，回眸里，发梢间
+                        轻盈舞动。漫步在“水母长廊”中，光与影的交错让我们的海洋之旅进入七彩梦幻的水母宫殿，让我们的视野
+                        徜徉在温柔的水母中。穿梭在这浪漫的时空，您找到那个心仪的水母了吗?
+                </p>
+                <h4>四、 缤纷海洋</h4>
+                <p>
+                        &nbsp;&nbsp;&nbsp;缤纷海洋拥有数量庞大的群游鱼类，獠牙凶猛的鲨鱼军团、色彩艳丽却剧毒无比的
+                        毒鱼家族、五彩斑斓的珊瑚礁和各种海洋精灵。在这个缤纷的海洋世界里，
+                        每一种生物都有它们自己的神秘故事，等着向您诉说。
+                </p>
+                <img src="imgs/333.jpg">
+                <img src="imgs/444.jpg">
+                <h4>五、千奇百科</h4>
+                <p>
+                        &nbsp;&nbsp;&nbsp;从古至今，无论是郑和下西洋还是现今蛟龙号深潜六千多米，人类一直未停止过对
+                        海洋的探索。通过正佳极地海洋世界的科普之窗，了解千奇百态的海底世界。这里有与海底岩石长相莫辩的
+                        石头鱼，一副小狗萌样却满身剧毒的狗头鲀。一起加快步伐，去科普知识的海洋里尽情遨游吧！
+                </p>
+                <h4>六、萌哒哒乐园</h4>
+                <p>
+                        &nbsp;&nbsp;&nbsp;踏入童话中的森林世界，拜访可爱的小萌主们。在萌哒哒乐园里，住着宫崎骏动画
+                        里的龙猫、网红神兽“草泥马”、萌化人心的阿拉斯加犬、喵星人、松鼠猴、水豚、无毛豚鼠……这是一个藏
+                        着人与动物珍贵情感的宝藏乐园。
+                </p>
+                <img src="imgs/555.jpg">
+                <img src="imgs/666.jpg">
+            </div>
+        </div>
+        <div id="box4">
+                <ul class="finally">
+                    <li>
+                        <a href="#">首页</a>
+                         | 
+                        <a href="#">工商代理</a>
+                         | 
+                        <a href="#">财务代记账</a>
+                         | 
+                        <a href="#">股权交易与变更</a>
+                         | 
+                        <a href="#">企业贷款</a>
+                         | 
+                        <a href="#">办公室租赁</a>
+                         | 
+                        <a href="#">社保公积金代理</a>
+                         |
+                        <a href="#">法律服务</a>
+                    </li>
+                    <li class="z2"> 
+                        2020-2022 青禾工作室 版权所有
+                    </li>
+                </ul>
+            </div>
+    </div>
+</body>
+<script>
+    var box = document.getElementById("box");
+	var img1 = document.getElementById("img1");
+    var img2 = document.getElementById("img2");
+    var Simg = document.getElementById("Simg");
+    var slider = document.getElementById("slider");
+    var Bimg = document.getElementById("Bimg");
+
+    img1.onmouseover = function() {
+        slider.style.display = "block";
+        img2.style.display = "block";
+    }
+    img1.onmousemove = function(e) {
+        var mouseX = e.clientX;
+        var mouseY = e.clientY;
+        var boxLeft = box.offsetLeft;
+        var boxTop = box.offsetTop;
+        var sliderWidth = slider.offsetWidth;
+        var sliderHeight = slider.offsetHeight;
+        var sliderLeft = mouseX - boxLeft - sliderWidth/2;
+        if(sliderLeft <= 0){
+            sliderLeft = 0;
+        }
+        else if (sliderLeft >= (img1.offsetWidth - slider.offsetWidth)){
+            sliderLeft = img1.offsetWidth - slider.offsetWidth;
+        }
+        var sliderTop = mouseY - boxTop - slider.offsetHeight /2;
+        if(sliderTop <= 0){
+            sliderTop = 0;
+        }
+        else if (sliderTop >= (img1.offsetHeight - slider.offsetHeight)){
+            sliderTop = img1.offsetHeight - slider.offsetHeight;
+        }
+        slider.style.left = sliderLeft + "px";
+        slider.style.top = sliderTop + "px";
+
+        var maxW = Simg.clientWidth - slider.offsetWidth;
+        var maxH = Simg.clientHeight - slider.offsetHeight;
+        var nLeft = Math.min(maxW,Math.max(0,(mouseX-boxLeft-box.clientLeft-sliderWidth/2)));
+        var nTop = Math.min(maxH,Math.max(0,(mouseY-boxTop-box.clientTop-sliderHeight/2)));
+        Bimg.style.left = -(Bimg.offsetWidth-img2.clientWidth)*(nLeft/(Simg.clientWidth-slider.offsetWidth))+"px";
+        Bimg.style.top = -(Bimg.offsetHeight-img2.clientHeight)*(nTop/(Simg.clientHeight-slider.offsetHeight))+"px";
+
+        var animal = document.getElementById("animalLi");
+        var imgList = animal.getElementsByTagName("img");
+        for(var i = 0; i < imgList.length; i++) {
+            imgList[i].onclick = function() {
+                var imgSrc = this.getAttribute("src");
+                Simg.setAttribute("src", imgSrc);
+                Bimg.setAttribute("src", imgSrc);
+                this.setAttribute("index", 1);
+            }
+        }
+    } 
+</script>
+</html>
